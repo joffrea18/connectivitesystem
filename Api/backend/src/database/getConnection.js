@@ -6,7 +6,6 @@ const { HOST, USERS, PASSWORD, DATABASE } = process.env;
 
 let pool;
 
-
 const getConnection = async () => {
     if(!pool){
         pool = mysql.createPool({

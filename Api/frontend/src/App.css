@@ -65,6 +65,12 @@ form {
   position: relative;
 }
 
+.labelSpace {
+  /* margin: 2rem; */
+  max-width:fit-content;
+  place-content: center;
+}
+
 fieldset {
   margin: 2rem;
   padding: 2rem;
@@ -83,6 +89,8 @@ input {
   color: white;
   border-radius: 0.6rem;
   margin: 0.45rem;
+  max-width:fit-content;
+  place-content: center;
 }
 
 
