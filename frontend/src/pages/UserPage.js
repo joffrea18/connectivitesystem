@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { registerUser } from '../services';
+import swal from 'sweetalert';
 
 const UserPage = () => {
 
@@ -16,6 +17,10 @@ const UserPage = () => {
   const [ city, setCity ] = useState('');
   const [ province, setProvince ] = useState('');
   const [ error, setError ] = useState('');
+
+  const mostrarAlerta = () => {
+    swal("Debes cumplimentar todos los datos 🧐");
+}
 
   const handleForm = async (e) => {
     e.preventDefault();
@@ -49,7 +54,7 @@ const UserPage = () => {
         <form onSubmit={handleForm}>
           <fieldset>
         <h2>Regístrate</h2>
-            <label htmlFor='name'>
+            <label className='labelSpace' htmlFor='name'>
               <input
               name="name"
               type="name"
@@ -58,7 +63,7 @@ const UserPage = () => {
               placeholder='Nombre*'
               onChange={(e) => setName(e.target.value)}/>
             </label>
-            <label htmlFor='last_name'>
+            <label className='labelSpace' htmlFor='last_name'>
               <input
               name="last_name"
               type="last_name"
@@ -67,7 +72,7 @@ const UserPage = () => {
               autoComplete="family-name"
               onChange={(e) => setLastName(e.target.value)}/>
             </label>
-            <label htmlFor='email'>
+            <label className='labelSpace' htmlFor='email'>
               <input
               name="email"
               type="email"
@@ -76,7 +81,7 @@ const UserPage = () => {
               autoComplete="off"
               onChange={(e) => setEmail(e.target.value)}/>
             </label>          
-            <label htmlFor='pass'>
+            <label className='labelSpace' htmlFor='pass'>
               <input
               name="password"
               type="password"
@@ -85,7 +90,7 @@ const UserPage = () => {
               autoComplete='new-password'
               onChange={(e) => setPass(e.target.value)}/>
             </label>
-            <label htmlFor='pass'>
+            <label className='labelSpace' htmlFor='pass'>
               <input
               name="pass1"
               type="password"
@@ -94,7 +99,7 @@ const UserPage = () => {
               autoComplete='new-password'
               onChange={(e) => setPass1(e.target.value)}/>
             </label>          
-            <label htmlFor='tel'>
+            <label className='labelSpace' htmlFor='tel'>
               <input
               name="telf"
               type="tel"
@@ -102,7 +107,7 @@ const UserPage = () => {
               placeholder='Teléfono*'
               onChange={(e) => setTel(e.target.value)}/>
             </label>         
-            <label htmlFor='cp'>
+            <label className='labelSpace' htmlFor='cp'>
               <input
               name="zipcode" 
               type="zipcode" 
@@ -110,7 +115,7 @@ const UserPage = () => {
               placeholder='C.P.*'
               onChange={(e) => setCp(e.target.value)}/>
             </label>         
-            <label htmlFor='address'> 
+            <label className='labelSpace' htmlFor='address'> 
               <input
               name="addres" 
               type="addres" 
@@ -118,7 +123,7 @@ const UserPage = () => {
               placeholder='Dirección*'
               onChange={(e) => setAddress(e.target.value)}/>
             </label>       
-            <label htmlFor='city'>
+            <label className='labelSpace'  htmlFor='city'>
               <input 
               name="city"
               type="city" 
@@ -126,7 +131,7 @@ const UserPage = () => {
               placeholder='Ciudad*'
               onChange={(e) => setCity(e.target.value)}/>
               </label>       
-            <label htmlFor='province'>
+            <label className='labelSpace' htmlFor='province'>
               <input
               name="province" 
               type="province" 
@@ -134,7 +139,8 @@ const UserPage = () => {
               placeholder='Provincia*'
               onChange={(e) => setProvince(e.target.value)}/> 
               </label>          
-            <button className='button'>Regístrarme</button>
+            <button onClick={()=>mostrarAlerta()} className='button'>Regístrarme</button>
+            <Link to="/"><button className='button'>Home</button></Link>
             <p>
               ¿Ya tienes cuenta?
               <Link to="/login">Inicia sesión</Link>

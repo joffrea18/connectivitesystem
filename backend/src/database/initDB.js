@@ -3,6 +3,8 @@
 const { getConnection } = require('./getConnection');
 require('dotenv').config();
 
+console.log(process.env);
+
 async function main() {
     // console.log("main");
     let connection;

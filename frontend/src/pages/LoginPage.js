@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { getUserData, loginService, loginServiceId } from '../services';
+import { loginService, loginServiceId } from '../services';
 import { AuthContext } from '../context/AuthContext';
+// import swal from 'sweetalert';
 // import Header1 from './usersvalidates/Header1';
 
 const LoginPage = () => {
@@ -17,7 +18,6 @@ const LoginPage = () => {
   const handleForm  = async (e) => {
     e.preventDefault();
     setError('')
-
 
     try {
       const token = await loginService({email, password});
