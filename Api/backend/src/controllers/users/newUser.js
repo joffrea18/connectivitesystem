@@ -60,7 +60,7 @@ const newUser = async (req, res, next) =>{
         
         res.send({
             status: 'ok',
-            message: `Usuario creado con id: ${id}`
+            message: `Usuario creado con id: ${id}`,
         })
     } catch (error) {
         next(error)

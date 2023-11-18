@@ -23,7 +23,7 @@ function App() {
               <Route path='/' element={<Auth />} />
               <Route path='/login' element={<LoginPage />} />
               <Route path={`/loginuser`} element={<Uservalidate />} />
-              <Route path='/user' element={<UserPage />} />
+              <Route path='/useregister' element={<UserPage />} />
               <Route path='*' element={<NotFound />} />
             </Routes>
       </main>

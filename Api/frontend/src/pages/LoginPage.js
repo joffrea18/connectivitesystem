@@ -39,7 +39,7 @@ const LoginPage = () => {
  return (
         <>
         <form onSubmit={handleForm}>
-          <fieldset>
+          <fieldset id='login'>
         <h2>Inicia sesión</h2>
             <label>
               <input
@@ -63,7 +63,11 @@ const LoginPage = () => {
             <button className='button'>Login</button>
             <p>
               Todavía no tienes cuenta?
-              <Link to="/user">Regístrate</Link>
+              <br/>
+              <Link to="/useregister">Regístrate</Link>
+              <br/>
+              <br/>
+              <Link to="/">Volver a la página inicial</Link>
             </p>
           </fieldset>
           { error ? <p>{error}</p> : null }

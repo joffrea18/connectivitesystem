@@ -1,0 +1,17 @@
+.product-card {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.product-card img {
+  height: 100px;
+  width: 100px;
+}
+
+.product-card span {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

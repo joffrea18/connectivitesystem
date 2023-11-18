@@ -20,7 +20,7 @@ const validateUser = (req, res, next) => {
         let token;
 
         try {
-            token = jwt.verify(authorization, process.env.SECRET);
+            token = jwt.verify(authorization, process.env.SECRET_TOKEN);
         } catch {
             throw newError('Token incorrecto');
         }

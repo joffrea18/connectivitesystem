@@ -18,16 +18,12 @@ const UserPage = () => {
   const [ province, setProvince ] = useState('');
   const [ error, setError ] = useState('');
 
-  const mostrarAlerta = () => {
-    swal("Debes cumplimentar todos los datos 🧐");
-}
-
   const handleForm = async (e) => {
     e.preventDefault();
     setError('')
 
     if(pass !== pass1){
-      setError('Las passwords deben coincidir');
+      swal('Las passwords deben coincidir');
       return
     }
     try {
@@ -42,9 +38,11 @@ const UserPage = () => {
         city,
         province})
         // if(registerUser) return <Register />
+        swal('¡Resgistrado con éxito! 😁 ')
+        swal('Ahora puedes acceder')
         navigate('/login');
     } catch (error) {
-      setError(error.message)
+      swal(error.message)
     
     }
     
@@ -139,10 +137,11 @@ const UserPage = () => {
               placeholder='Provincia*'
               onChange={(e) => setProvince(e.target.value)}/> 
               </label>          
-            <button onClick={()=>mostrarAlerta()} className='button'>Regístrarme</button>
+            <button className='button'>Regístrarme</button>
             <Link to="/"><button className='button'>Home</button></Link>
             <p>
               ¿Ya tienes cuenta?
+              <br/>
               <Link to="/login">Inicia sesión</Link>
             </p>
             {error ? <p>{error}</p> : null}

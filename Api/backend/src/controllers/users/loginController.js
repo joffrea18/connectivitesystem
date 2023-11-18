@@ -27,11 +27,11 @@ const loginController = async (req, res, next) =>{
         const payload = { id: user.id };
 
         if (passwordValidate) {
-            const token = jwt.sign(payload, process.env.SECRET, {
+            const token = jwt.sign(payload, process.env.SECRET_TOKEN, {
                 expiresIn: '1h',
             })
             
-        // console.log(user);
+        console.log(user);
         
         res.send({
             id: user.id,
