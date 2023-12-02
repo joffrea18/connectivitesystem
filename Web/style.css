@@ -1,0 +1,108 @@
+@import url("./base.css");
+
+body {
+  /* Con el grid gestionamos el Layout de la web */
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Con esto de arriba le digo ocúpame todo */
+  grid-template-rows: 10rem 2rem 1fr 2rem;
+}
+
+body > header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* body > header > nav > menu {
+  display: flex;
+  gap: 1rem;
+} */
+
+body > nav menu {
+  display: flex;
+  /* text-align: justify; */
+}
+
+body > footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  /* con este de arriba indicamos un espacio que es igual de ambos lados para el texto */
+}
+
+main {
+  /* Con esto mi main cambia las tarjetas contenidas a lo largo ahora  lo ancho */
+  display: flex;
+  gap: 1rem;
+  /* Ojo al colocar esto se desbarajusta y hay que volverlo a ajustar con las siguientes adaptaciones que se adicionarán */
+  /* Al agregar ahora esto de abajo se vuelve a ajustar las tarjetas solo al contenido abarcado por el Layout */
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  /* Esto de abajo lo estamos agregando después para poder agregar lo que sería el botón que dirá esos casos que no tienen precio especificado en la web */
+  position: relative;
+}
+
+article p.description{
+  flex-grow: 1;
+  /* Esto sirve para empujar todo el contenido ejemplo del main, hacia arriba, evitando distancias arriba abajo extrañas */
+  /* flex-shrink: hace lo contrario al grow, más que nada para cuando se está encogiendo la pantalla; */
+}
+
+div.destacado{
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+  border-radius: 50%;
+  position: absolute;
+  /* Con estos de abajo le indico en donde quiero que se ubique */
+  bottom: 2px;
+  left: 2px;
+}
+
+a {
+  /* text-decoration: none; */
+  text-decoration-line: none;
+  color: black;
+}
+
+@media (min-width: 600px) {
+
+  /* Acá agrego lo mismo de arriba que quiero que se modifique únicamente */
+  body {
+    grid-template-columns: 10rem 1fr;
+    grid-template-rows: 5rem 1fr 2rem;
+  }
+  /* Con esto de abajo está modificando dentro de la anchura e indicando las columnas que debe abarcar */
+   body > header,
+   body > footer {
+    grid-column: span 2;
+   }
+
+   body > header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  body > nav menu {
+    flex-direction: column;
+  }
+
+  body > footer {
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+
+
+
+
