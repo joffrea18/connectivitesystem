@@ -14,7 +14,125 @@ const Auth = () => {
            <Link to='/login' ><button onClick={()=>mostrarAlerta()} className='button'> Login</button></Link>
            <Link to='/user' ><button onClick={()=>mostrarAlerta()} className='button'>Registro</button></Link>
         {/* <section><strong>Estamos en la home</strong></section> */}
-        </section>
+        <header>
+            <h1>TecnoIN</h1>
+        </header>
+        <main>
+      <article>
+        <img
+        src="https://le-cdn.website-editor.net/s/e72abb8ee4664950950d50c31515a98c/dms3rep/multi/opt/gestoria-online-barcelona-1920w.jpg?Expires=1703700021&Signature=g0H7LTXr86biy67uxCe3n9STl~N6qO210uuSuSO2S~9WEf2xOcx7R34IOYrr22EWzVvv9pc~vxXv-603LR-7tXpOrcNFteVE-CHWOrHK8hYjdNoycQxBhVct32wWPNHLDwsfZbRRKOvji2MLVkEi~mE8ArbZZkQzSDeLilESNOWwegXweILi4p94HddCCF20opX0L-vf5BmK68YzSx03hsoYylqAF8nRm6ZOw9nWyhX~MXo5bGMTarG8g9y0YTgtxSTO9YcztMu6zYhbXwUZxwWRw6WBcJoLs-VcPXB6WLhN3kIYXTeiSNuuY4Rk8bUDM524yMfjhAe2Z1Hb0~UMjQ__&Key-Pair-Id=K2NXBXLF010TJW"
+        alt="foto de producto"
+        />
+        <a href="./Carts/gestoria.html">
+          <h3>Nuestra Gestoría</h3>
+          <p class="description" align="center">
+            Gestiones de deptos. de Tecnologías
+          </p>
+        </a>
+          <p class="price" >Consult €</p>
+          <div class="destacado" ></div>
+      </article>
+      <article>
+        <img
+          src="https://images.unsplash.com/photo-1633025094151-6fc996255e28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+          alt="foto de producto"
+        />
+        <h2>Nombre</h2>
+        <p class="description">Lorem, ipsum dolor sit amet</p>
+        <p class="price">20.00€</p>
+      </article>
+      <article>
+        <img
+          src="https://www.valoradata.com/files/uploads/2014/08/soporte1-1024x699.jpg"
+          alt="foto de producto"
+        />
+        <a href="./Carts/soporte.html">
+          <h3>Soporte</h3>
+          <p class="description" align="center">Gestión y asesoría de soporte técnico</p>
+          <p class="price">Consult €</p>
+          <div class="destacado" ></div>
+        </a>
+      </article>
+      <article>
+        <img
+          src="https://admin.finanty.com/assets/noticias/API-WEB-01.jpg"
+          alt="foto de producto"
+        />
+        <a href="./Carts/apis.html">
+          <h3>Apis</h3>
+          <p class="description" align="center">
+            Desarrollo de Apis webs
+          </p>
+          <p class="price">350.00€</p>
+        </a>
+      </article>
+      <article>
+        <img
+          src="https://concepto.de/wp-content/uploads/2019/05/servidor-e1557165670831.jpg"
+          alt="foto de producto"
+        />
+        <a href="./Carts/servidores.html">
+          <h3>Creación de servidores</h3>
+          <p class="description" align="center">Gestión y creación de servidores</p>
+          <p class="price">Consult €</p>
+          <div class="destacado" ></div>
+        </a>
+      </article>
+      <article>
+        <img
+          src="https://blog.beep.es/wp-content/uploads/2022/01/actualizaciones01.jpg"
+          alt="foto de producto"
+        />
+        <a href="./Carts/software.html">
+          <h3>Actualización de software</h3>
+          <p class="description" align="center">
+            Actualizaciones e instalación de OS
+          </p>
+          <p class="price">35.00€</p>
+        </a>
+      </article>
+      <article>
+        <img
+          src="https://repararordenadores.com/wp-content/uploads/2022/11/arreglar-computadoras-madrid-optimized.png"
+          alt="foto de producto"
+        />
+        <a href="./Carts/reparacion.html">
+          <h3>Reparación de ordenadores</h3>
+          <p class="description" align="center">Diagnóstico y reparación</p>
+          <p class="price">50.00€</p>
+        </a>
+      </article>
+      <article>
+        <img
+          src="https://images.unsplash.com/photo-1633025094151-6fc996255e28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+          alt="foto de producto"
+        />
+        <h2>Nombre</h2>
+        <p class="description">Lorem, ipsum dolor sit amet Sapiente, odit.</p>
+        <p class="price">20.00€</p>
+      </article>
+      <article>
+        <img
+          src="https://images.unsplash.com/photo-1633025094151-6fc996255e28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+          alt="foto de producto"
+        />
+        <h2>Nombre</h2>
+        <p class="description">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p class="price">20.00€</p>
+      </article>
+      <article>
+        <img
+          src="https://images.unsplash.com/photo-1633025094151-6fc996255e28?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80"
+          alt="foto de producto"
+        />
+        <h2>Nombre</h2>
+        <p class="description">Lorem, ipsum dolor sit amet</p>
+        <p class="price">20.00€</p>
+      </article>
+    </main>
+    </section>
     );
 }
 

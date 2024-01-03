@@ -42,6 +42,46 @@ h2 {
   padding-bottom: 1rem;
 }
 
+/* Article */
+
+article img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+article *:not(img) {
+  margin: 0.5rem 1rem;
+}
+
+article p.price {
+  text-align: right;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  /* Esto de abajo lo estamos agregando después para poder agregar lo que sería el botón que dirá esos casos que no tienen precio especificado en la web */
+  position: relative;
+}
+
+article p.description{
+  flex-grow: 1;
+  /* Esto sirve para empujar todo el contenido ejemplo del main, hacia arriba, evitando distancias arriba abajo extrañas */
+  /* flex-shrink: hace lo contrario al grow, más que nada para cuando se está encogiendo la pantalla; */
+}
+
+div.destacado{
+  height: 20px;
+  width: 20px;
+  background-color: blue;
+  border-radius: 50%;
+  position: absolute;
+  /* Con estos de abajo le indico en donde quiero que se ubique */
+  bottom: 2px;
+  left: 2px;
+}
+
 .button {
   margin: .9rem;
   border-radius: 2rem;
@@ -95,12 +135,59 @@ input {
 
 
 footer {
+  color: var(--primary);
   padding: 1rem;
   text-align: center;
   position: absolute;
   justify-content: end;
   align-items: end;
   bottom: 0;
-  width: 100%;
+  width: max-content;
   color: white;
 }
+
+/* NAV*/
+
+body > nav menu li {
+  width: 100%;
+}
+
+body > nav menu a {
+  text-align: center;
+  color: var(--primary);
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 0;
+}
+
+body > nav menu a:hover {
+  background: var(--background);
+}
+
+
+/* MEDIA QUERY */
+@media (min-width: 600px) {
+  /* HEADER */
+
+  header {
+    z-index: 1;
+    padding: 0 2rem;
+  }
+
+  /* NAV */
+
+  body > nav {
+    padding-top: 1rem;
+  }
+
+  body > nav menu a {
+    text-align: left;
+    padding-left: 0.5rem;
+  }
+}
+
+
+
+
