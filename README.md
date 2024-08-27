@@ -1,4 +1,4 @@
-# tecno_in
+# Connectivité System
 
 Respositorie created for the project to develop the api and web site to this company.
 
